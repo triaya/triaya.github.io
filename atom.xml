@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://triaya.github.io/"/>
-  <updated>2016-03-31T08:30:24.312Z</updated>
+  <updated>2016-03-31T09:47:55.583Z</updated>
   <id>http://triaya.github.io/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Two Sum</title>
+    <link href="http://triaya.github.io/two-sum/"/>
+    <id>http://triaya.github.io/two-sum/</id>
+    <published>2016-03-31T09:32:39.000Z</published>
+    <updated>2016-03-31T09:47:55.583Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;&amp;#x5206;&amp;#x6790;&quot;&gt;&lt;a href=&quot;#&amp;#x5206;&amp;#x6790;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x5206;&amp;#x6790;&quot;&gt;&lt;/a&gt;&amp;#x5206;&amp;#x6790;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x65B9;&amp;#x6CD5;1&amp;#xFF1A;&amp;#x66B4;&amp;#x529B;&amp;#xFF0C;&amp;#x590D;&amp;#x6742;&amp;#x5EA6;$O({n^2})$&amp;#xFF0C;&amp;#x4F1A;&amp;#x8D85;&amp;#x65F6;&lt;/li&gt;
+&lt;li&gt;&amp;#x65B9;&amp;#x6CD5;2&amp;#xFF1A;hash&amp;#x3002;&amp;#x7528;&amp;#x4E00;&amp;#x4E2A;&amp;#x54C8;&amp;#x5E0C;&amp;#x8868;&amp;#xFF0C;&amp;#x5B58;&amp;#x50A8;&amp;#x6BCF;&amp;#x4E2A;&amp;#x6570;&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x4E0B;&amp;#x6807;&amp;#xFF0C;&amp;#x590D;&amp;#x6742;&amp;#x5EA6;$O(n)$&lt;/li&gt;
+&lt;li&gt;&amp;#x65B9;&amp;#x6CD5;3&amp;#xFF1A;&amp;#x5148;&amp;#x6392;&amp;#x5E8F;&amp;#xFF0C;&amp;#x7136;&amp;#x540E;&amp;#x5DE6;&amp;#x53F3;&amp;#x5939;&amp;#x903C;&amp;#xFF0C;&amp;#x6392;&amp;#x5E8F;$O(nlogn)$&amp;#xFF0C;&amp;#x5DE6;&amp;#x53F3;&amp;#x5939;&amp;#x903C;$O(n)$&amp;#xFF0C;&amp;#x6700;&amp;#x7EC8;$O(nlogn)$&amp;#x3002;&amp;#x4F46;&amp;#x662F;&amp;#x6CE8;&amp;#x610F;&amp;#xFF0C;&lt;br&gt;&amp;#x8FD9;&amp;#x9898;&amp;#x9700;&amp;#x8981;&amp;#x8FD4;&amp;#x56DE;&amp;#x7684;&amp;#x662F;&amp;#x4E0B;&amp;#x6807;&amp;#xFF0C;&amp;#x800C;&amp;#x4E0D;&amp;#x662F;&amp;#x6570;&amp;#x5B57;&amp;#x672C;&amp;#x8EAB;&amp;#xFF0C;&amp;#x56E0;&amp;#x6B64;&amp;#x8FD9;&amp;#x4E2A;&amp;#x65B9;&amp;#x6CD5;&amp;#x884C;&amp;#x4E0D;&amp;#x901A;&amp;#x3002;&lt;h2 id=&quot;&amp;#x4EE3;&amp;#x7801;&quot;&gt;&lt;a href=&quot;#&amp;#x4EE3;&amp;#x7801;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x4EE3;&amp;#x7801;&quot;&gt;&lt;/a&gt;&amp;#x4EE3;&amp;#x7801;&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// LeetCode, Two Sum&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;#x65B9;&amp;#x6CD5;2&amp;#xFF1A;hash&amp;#x3002;&amp;#x7528;&amp;#x4E00;&amp;#x4E2A;&amp;#x54C8;&amp;#x5E0C;&amp;#x8868;&amp;#xFF0C;&amp;#x5B58;&amp;#x50A8;&amp;#x6BCF;&amp;#x4E2A;&amp;#x6570;&amp;#x5BF9;&amp;#x5E94;&amp;#x7684;&amp;#x4E0B;&amp;#x6807;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// &amp;#x65F6;&amp;#x95F4;&amp;#x590D;&amp;#x6742;&amp;#x5EA6;O(n)&amp;#xFF0C;&amp;#x7A7A;&amp;#x95F4;&amp;#x590D;&amp;#x6742;&amp;#x5EA6;O(n)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; Solution {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; twoSum(&lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; &amp;amp;num, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; target) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;unordered_map&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;, &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; mapping;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;built_in&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; num.size(); i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            mapping[num[i]] = i;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; num.size(); i++) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; gap = target - num[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (mapping.find(gap) != mapping.end() &amp;amp;&amp;amp; mapping[gap] &amp;gt; i) {&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                result.push_back(i + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                result.push_back(mapping[gap] + &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;break&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; result;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;};&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&amp;#x6458;&amp;#x5F55;&amp;#x81EA;&amp;#xFF1A;&lt;a href=&quot;https://github.com/soulmachine/leetcode&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/soulmachine/leetcode&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;&amp;#x5206;&amp;#x6790;&quot;&gt;&lt;a href=&quot;#&amp;#x5206;&amp;#x6790;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x5206;&amp;#x6790;&quot;&gt;&lt;/a&gt;&amp;#x5206;&amp;#x6790;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x65B9;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>MySQL 简单用户管理</title>
