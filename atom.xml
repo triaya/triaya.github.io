@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://triaya.github.io/"/>
-  <updated>2016-03-31T09:47:55.583Z</updated>
+  <updated>2016-08-24T09:48:33.236Z</updated>
   <id>http://triaya.github.io/</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算距离</title>
+    <link href="http://triaya.github.io/%E8%AE%A1%E7%AE%97%E8%B7%9D%E7%A6%BB/"/>
+    <id>http://triaya.github.io/计算距离/</id>
+    <published>2016-08-24T09:07:34.000Z</published>
+    <updated>2016-08-24T09:48:33.236Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;&amp;#x7B97;&amp;#x8DDD;&amp;#x79BB;&quot;&gt;&lt;a href=&quot;#&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;&amp;#x7B97;&amp;#x8DDD;&amp;#x79BB;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;&amp;#x7B97;&amp;#x8DDD;&amp;#x79BB;&quot;&gt;&lt;/a&gt;&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;&amp;#x7B97;&amp;#x8DDD;&amp;#x79BB;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x8BB0;&amp;#x4E0B;&amp;#x6765;&amp;#xFF0C;&amp;#x5F53;&amp;#x4E2A;&amp;#x5907;&amp;#x4EFD;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;&amp;#x516C;&amp;#x5F0F;&quot;&gt;&lt;a href=&quot;#&amp;#x516C;&amp;#x5F0F;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x516C;&amp;#x5F0F;&quot;&gt;&lt;/a&gt;&amp;#x516C;&amp;#x5F0F;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&amp;#x8BBE;&amp;#x7B2C;&amp;#x4E00;&amp;#x70B9;A&amp;#x7684;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x4E3A;(LonA, LatA)&amp;#xFF0C;&amp;#x7B2C;&amp;#x4E8C;&amp;#x70B9;B&amp;#x7684;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x4E3A;(LonB, LatB)&amp;#xFF0C;&amp;#x6309;&amp;#x7167;0&amp;#x5EA6;&amp;#x7ECF;&amp;#x7EBF;&amp;#x7684;&amp;#x57FA;&amp;#x51C6;&amp;#xFF0C;&amp;#x4E1C;&amp;#x7ECF;&amp;#x53D6;&amp;#x7ECF;&amp;#x5EA6;&amp;#x7684;&amp;#x6B63;&amp;#x503C;(Longitude)&amp;#xFF0C;&amp;#x897F;&amp;#x7ECF;&amp;#x53D6;&amp;#x7ECF;&amp;#x5EA6;&amp;#x8D1F;&amp;#x503C;(-Longitude)&amp;#xFF0C;&amp;#x5317;&amp;#x7EAC;&amp;#x53D6;90-&amp;#x7EAC;&amp;#x5EA6;&amp;#x503C;(90-Latitude)&amp;#xFF0C;&amp;#x5357;&amp;#x7EAC;&amp;#x53D6;90+&amp;#x7EAC;&amp;#x5EA6;&amp;#x503C;(90+Latitude)&amp;#xFF0C;&amp;#x5219;&amp;#x7ECF;&amp;#x8FC7;&amp;#x4E0A;&amp;#x8FF0;&amp;#x5904;&amp;#x7406;&amp;#x8FC7;&amp;#x540E;&amp;#x7684;&amp;#x4E24;&amp;#x70B9;&amp;#x88AB;&amp;#x8BA1;&amp;#x4E3A;(MLonA, MLatA)&amp;#x548C;(MLonB, MLatB)&amp;#x3002;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$&lt;br&gt;C = sin(MLatA)*sin(MLatB)*cos(MLonA-MLonB) + cos(MLatA)*cos(MLatB)&lt;br&gt;$$&lt;br&gt;$$&lt;br&gt;Distance=R*Arccos(C)*Pi/180&lt;br&gt;$$&lt;/p&gt;
+&lt;h2 id=&quot;&amp;#x4EE3;&amp;#x7801;&quot;&gt;&lt;a href=&quot;#&amp;#x4EE3;&amp;#x7801;&quot; class=&quot;headerlink&quot; title=&quot;&amp;#x4EE3;&amp;#x7801;&quot;&gt;&lt;/a&gt;&amp;#x4EE3;&amp;#x7801;&lt;/h2&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * google maps&amp;#x7684;&amp;#x811A;&amp;#x672C;&amp;#x91CC;&amp;#x4EE3;&amp;#x7801;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;      &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; EARTH_RADIUS = &lt;span class=&quot;number&quot;&gt;6378.137&lt;/span&gt;;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;rad&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; d)&lt;/span&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;{   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; d * Math.PI / &lt;span class=&quot;number&quot;&gt;180.0&lt;/span&gt;;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/**   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; * &amp;#x6839;&amp;#x636E;&amp;#x4E24;&amp;#x70B9;&amp;#x95F4;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x5750;&amp;#x6807;&amp;#xFF08;double&amp;#x503C;&amp;#xFF09;&amp;#xFF0C;&amp;#x8BA1;&amp;#x7B97;&amp;#x4E24;&amp;#x70B9;&amp;#x95F4;&amp;#x8DDD;&amp;#x79BB;&amp;#xFF0C;&amp;#x5355;&amp;#x4F4D;&amp;#x4E3A;&amp;#x7C73;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; */&lt;/span&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;GetDistance&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(&lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; lat1, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; lng1, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; lat2, &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; lng2)&lt;/span&gt;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;{   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; radLat1 = rad(lat1);   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; radLat2 = rad(lat2);   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; a = radLat1 - radLat2;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; b = rad(lng1) - rad(lng2);   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;double&lt;/span&gt; s = &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; * Math.Asin(Math.Sqrt(Math.Pow(Math.Sin(a/&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;),&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) +   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    Math.Cos(radLat1)*Math.Cos(radLat2)*Math.Pow(Math.Sin(b/&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;),&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)));   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    s = s * EARTH_RADIUS;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    s = Math.Round(s * &lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;) / &lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; s;   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;&amp;#x6458;&amp;#x5F55;&amp;#x81EA;&amp;#xFF1A;&lt;a href=&quot;http://blog.csdn.net/yl2isoft/article/details/16367901&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://blog.csdn.net/yl2isoft/article/details/16367901&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;&amp;#x7B97;&amp;#x8DDD;&amp;#x79BB;&quot;&gt;&lt;a href=&quot;#&amp;#x6839;&amp;#x636E;&amp;#x7ECF;&amp;#x7EAC;&amp;#x5EA6;&amp;#x8BA1;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Two Sum</title>
